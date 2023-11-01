@@ -1,21 +1,68 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<robot generator="Robot 6.1.1 (Python 3.12.0 on win32)" generated="20231018 08:59:00.971" rpa="false" schemaversion="4">
-<suite id="s1" name="Amazonteste" source="c:\Users\nicolas_oliveira2\Documents\RobotFramework\amazonteste.robot">
-<test id="s1-t1" name="Caso de teste 02 - pesquisa de um Produto" line="4">
-<status status="FAIL" starttime="20231018 08:59:01.005" endtime="20231018 08:59:01.005">Test cannot be empty.</status>
+<robot generator="Robot 6.1.1 (Python 3.12.0 on win32)" generated="20231101 09:31:09.700" rpa="false" schemaversion="4">
+<suite id="s1" name="Webtesting" source="C:\Users\nicolas_oliveira2\Desktop\RobotFramework\webtesting">
+<suite id="s1-s1" name="Amazonteste" source="C:\Users\nicolas_oliveira2\Desktop\RobotFramework\webtesting\amazonteste.robot">
+<test id="s1-s1-t1" name="Caso de Teste 01 - Acesso ao menu &quot;Eletrônicos&quot;" line="9">
+<kw name="abrir o navegador" library="amazon_resources" type="SETUP">
+<kw name="Open Browser" library="SeleniumLibrary">
+<arg>browser=chrome</arg>
+<arg>options=add_experimental_option("detach", True)</arg>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<msg timestamp="20231101 09:31:09.885" level="INFO">Opening browser 'chrome' to base url 'None'.</msg>
+<msg timestamp="20231101 09:31:10.383" level="WARN">The chromedriver version (117.0.5938.92) detected in PATH at C:\Users\nicolas_oliveira2\AppData\Local\Programs\Python\Python312\chromedriver.exe might not be compatible with the detected chrome version (118.0.5993.118); currently, chromedriver 118.0.5993.70 is recommended for chrome 118.*, so it is advised to delete the driver in PATH and retry</msg>
+<status status="PASS" starttime="20231101 09:31:09.885" endtime="20231101 09:31:11.577"/>
+</kw>
+<kw name="Maximize Browser Window" library="SeleniumLibrary">
+<doc>Maximizes current browser window.</doc>
+<status status="PASS" starttime="20231101 09:31:11.577" endtime="20231101 09:31:11.700"/>
+</kw>
+<status status="PASS" starttime="20231101 09:31:09.884" endtime="20231101 09:31:11.700"/>
+</kw>
+<kw name="Acessar a home page do site Amazon.com.br" library="amazon_resources">
+<kw name="Go To" library="SeleniumLibrary">
+<arg>url=${URL}</arg>
+<doc>Navigates the current browser window to the provided ``url``.</doc>
+<msg timestamp="20231101 09:31:11.701" level="INFO">Opening url 'http://www.amazon.com.br'</msg>
+<status status="PASS" starttime="20231101 09:31:11.701" endtime="20231101 09:31:14.619"/>
+</kw>
+<kw name="Execute Javascript" library="SeleniumLibrary">
+<arg>document.body.style.zoom = '80%'</arg>
+<doc>Executes the given JavaScript code with possible arguments.</doc>
+<msg timestamp="20231101 09:31:14.619" level="INFO">Executing JavaScript:
+document.body.style.zoom = '80%'
+Without any arguments.</msg>
+<status status="PASS" starttime="20231101 09:31:14.619" endtime="20231101 09:31:14.625"/>
+</kw>
+<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
+<arg>Locator=${MENU_ELETRONICOS}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<msg timestamp="20231101 09:31:19.901" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="selenium-screenshot-3.png"&gt;&lt;img src="selenium-screenshot-3.png" width="800px"&gt;&lt;/a&gt;</msg>
+<msg timestamp="20231101 09:31:19.901" level="FAIL">Element 'Locator=//a[@href='/Eletronicos-e-Tecnologia/b/?ie=UTF8&amp;node=16209062011&amp;ref_=nav_cs_electronics'][contains(.,'Eletrônicos')]' not visible after 5 seconds.</msg>
+<status status="FAIL" starttime="20231101 09:31:14.625" endtime="20231101 09:31:19.902"/>
+</kw>
+<status status="FAIL" starttime="20231101 09:31:11.701" endtime="20231101 09:31:19.902"/>
+</kw>
+<doc>Esse teste verifica o menu do site Amazon.com.br e verifica a categoria Computadores e Informática</doc>
+<tag>menus categorias</tag>
+<status status="FAIL" starttime="20231101 09:31:09.884" endtime="20231101 09:31:19.903">Element 'Locator=//a[@href='/Eletronicos-e-Tecnologia/b/?ie=UTF8&amp;node=16209062011&amp;ref_=nav_cs_electronics'][contains(.,'Eletrônicos')]' not visible after 5 seconds.</status>
 </test>
-<status status="FAIL" starttime="20231018 08:59:00.983" endtime="20231018 08:59:01.008"/>
+<status status="FAIL" starttime="20231101 09:31:09.719" endtime="20231101 09:31:19.906"/>
+</suite>
+<status status="FAIL" starttime="20231101 09:31:09.701" endtime="20231101 09:31:19.908"/>
 </suite>
 <statistics>
 <total>
 <stat pass="0" fail="1" skip="0">All Tests</stat>
 </total>
 <tag>
+<stat pass="0" fail="1" skip="0">menus categorias</stat>
 </tag>
 <suite>
-<stat pass="0" fail="1" skip="0" id="s1" name="Amazonteste">Amazonteste</stat>
+<stat pass="0" fail="1" skip="0" id="s1" name="Webtesting">Webtesting</stat>
+<stat pass="0" fail="1" skip="0" id="s1-s1" name="Amazonteste">Webtesting.Amazonteste</stat>
 </suite>
 </statistics>
 <errors>
+<msg timestamp="20231101 09:31:10.383" level="WARN">The chromedriver version (117.0.5938.92) detected in PATH at C:\Users\nicolas_oliveira2\AppData\Local\Programs\Python\Python312\chromedriver.exe might not be compatible with the detected chrome version (118.0.5993.118); currently, chromedriver 118.0.5993.70 is recommended for chrome 118.*, so it is advised to delete the driver in PATH and retry</msg>
 </errors>
 </robot>

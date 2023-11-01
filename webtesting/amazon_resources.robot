@@ -10,9 +10,10 @@ abrir o navegador
     ...    options=add_experimental_option("detach", True)
     Maximize Browser Window
    
-fechar o navegador
-    Close Browser
+# fechar o navegador
+#     Close Browser
 
 Acessar a home page do site Amazon.com.br   
     Go To     url=${URL}
+    Execute Javascript    document.body.style.zoom = '80%'
     Wait Until Element Is Visible    Locator=${MENU_ELETRONICOS}

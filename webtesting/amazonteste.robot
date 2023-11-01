@@ -2,7 +2,7 @@
 Documentation
 Resource    amazon_resources.robot
 Test Setup    abrir o navegador
-Test Teardown    fechar o navegador
+# Test Teardown    fechar o navegador
 
 
 *** Test Cases ***
