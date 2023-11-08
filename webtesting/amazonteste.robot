@@ -10,7 +10,7 @@ Caso de Teste 01 - Acesso ao menu "Eletrônicos"
     [Documentation]    Esse teste verifica o menu do site Amazon.com.br e verifica a categoria Computadores e Informática
     [Tags]    menus categorias 
     Acessar a home page do site Amazon.com.br
-#     Entrar no menu "Eletrônicos"
+    Entrar no menu "Eletrônicos"
 #     Verificar se o titulo da pagina fica "Eletrônicos e Tecnologia | Amazon.com.br"
 #     Verificar de aparece a frase "Eletrônicos e Tecnologia"
 #     Verificar se aparece a categoria "Computadores e Informática"
